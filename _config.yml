@@ -72,6 +72,10 @@ help_two_link: https://twitter.com/theteaguns
 theme: minima
 plugins:
   - jekyll-feed
+  - jekyll-gist
+  - jekyll-paginate
+  - jekyll-seo-tag
+  - jekyll-sitemap
   - jekyll-last-modified-at
 
 # Exclude from processing.
@@ -87,3 +91,7 @@ plugins:
 sass:
   sass_dir:          _scss
   style:            :compressed
+
+# Exclude from processing.
+exclude:
+  - Gemfile
