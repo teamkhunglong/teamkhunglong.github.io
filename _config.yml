@@ -87,7 +87,6 @@ plugins:
 # their entries' file path in the `include:` list.
 #
 
-
 sass:
   sass_dir:          _scss
   style:            :compressed
