@@ -18,55 +18,61 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Odin - A Jekyll Knowledge Base Theme
-description: Odin is a simple to setup and use Jekyll theme for help desks and knowledge bases. Hosts for free on Github Pages!
+# Website title
+# Title | Tagline  # Works on chrome
+#
+title: Team Khủng Long
+tagline: Nhà của đội Khủng Long siêu cấp cute các thứ!
+description: Nhà của đội Khủng Long siêu cấp cute các thứ!
+
+# URL Stuffs
 #baseurl: /odin # the subpath of your site, e.g. /support
 url: https://teamkhunglong.com # the base hostname AND PROTOCOL for your site, e.g. http://example.com
 site.github.url: https://teamkhunglong.github.io
+
 permalink: /:categories/:title
 
-content_type: Knowledge Base #Define whether this is a knowledge base, help center, or something else
+content_type: Blog #Define whether this is a knowledge base, help center, or something else
 use_authors: true #Set this to false to disable showing post authors
 
 brand_logo: logo.png
 brand_name: Odin
-header: How can we help you?
-subheader: Support and documentation for Odin
+header: Team Khủng Long blog
+subheader: Tiến vào secbiz 101
 
 meta_image: odin-meta.png
 
 # Social Links
 twitter_username: minhtt159
-facebook_page: minhtt159
+facebook_page: https://facebook.com/minhtt159
 github_username: minhtt159
 email: minhtt159@teamkhunglong.com
-linkedin_page:
-instagram_username: 
+linkedin_page: https://www.linkedin.com/in/minhtt159/
+instagram_username: hnimnart
 
-
-# Navivation
+# Navigation
 nav_item_one: Github
 nav_item_one_link: https://github.com/minhtt159
 
 nav_item_two: Twitter
 nav_item_two_link: https://twitter.com/minhtt159
 
-nav_item_three: #
-nav_item_three_link: #
+nav_item_three: Facebook
+nav_item_three_link: https://facebook.com/minhtt159
 
-nav_button: Return to Odin Home
+nav_button: Home
 nav_button_link: https://teamkhunglong.com
 
 # More Help
-help_one_title: Odin Bugs
-help_one_content: If you find any bugs or problems with this theme, please open an issue over on Github.
+help_one_title: Bug Tracker
+help_one_content: If you find any bugs or problems on this blog, please open an issue over on Github.
 help_one_button: Github
-help_one_link: https://github.com/TeaGuns/odin/issues
+help_one_link: https://github.com/teamkhunglong/teamkhunglong.github.io/issues
 
-help_two_title: Twitter
-help_two_content: Feel free to tweet at me if you have suggestions for Odin. Or if you just want to say hi.
-help_two_button: Twitter
-help_two_link: https://twitter.com/theteaguns
+help_two_title: Contacts
+help_two_content: Feel free to contact me via email minhtt159[at]teamkhunglong.com or facebook messages
+help_two_button: Facebook
+help_two_link: https://facebook.com/minhtt159
 
 # Build settings
 theme: minima
