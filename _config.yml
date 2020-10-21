@@ -32,10 +32,10 @@ site.github.url: https://teamkhunglong.github.io
 
 permalink: /:categories/:title
 
-content_type: Blog #Define whether this is a knowledge base, help center, or something else
+content_type: Team Khủng Long #Define whether this is a knowledge base, help center, or something else
 use_authors: true #Set this to false to disable showing post authors
 
-brand_logo: logo.png
+brand_logo: khunglong_w.png
 brand_name: Odin
 header: Team Khủng Long blog
 subheader: Tiến vào secbiz 101
