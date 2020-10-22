@@ -36,11 +36,11 @@ content_type: Team Khủng Long #Define whether this is a knowledge base, help c
 use_authors: true #Set this to false to disable showing post authors
 
 brand_logo: khunglong_w.png
-brand_name: Odin
+brand_name: Dino
 header: Team Khủng Long blog
 subheader: Tiến vào secbiz 101
 
-meta_image: odin-meta.png
+meta_image: teamkhunglong-meta.png
 
 # Social Links
 twitter_username: minhtt159
