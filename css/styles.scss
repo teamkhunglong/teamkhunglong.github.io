@@ -38,3 +38,9 @@
 #anglesvg {
   display: block;
 }
+
+// Center an image https://stackoverflow.com/a/43691451
+img[src*='#center'] { 
+  display: block;
+  margin: auto;
+}
