@@ -26,7 +26,7 @@ tagline: Nhà của đội Khủng Long!
 description: Nhà của đội Khủng Long siêu cấp cute các thứ!
 
 # URL Stuffs
-#baseurl: /odin # the subpath of your site, e.g. /support
+baseurl: /blog # the subpath of your site, e.g. /support
 url: https://teamkhunglong.com # the base hostname AND PROTOCOL for your site, e.g. http://example.com
 site.github.url: https://teamkhunglong.github.io
 
@@ -35,8 +35,8 @@ permalink: /:categories/:title
 content_type: Team Khủng Long #Define whether this is a knowledge base, help center, or something else
 use_authors: true #Set this to false to disable showing post authors
 
-brand_logo: khunglong_w.png
-brand_name: Dino
+brand_logo: khunglong_w_new.png
+brand_name: Blog
 header: Team Khủng Long blog
 subheader: Tiến vào secbiz 101
 
@@ -47,7 +47,7 @@ twitter_username: minhtt159
 facebook_page: https://facebook.com/minhtt159
 github_username: minhtt159
 email: minhtt159@teamkhunglong.com
-linkedin_page: https://www.linkedin.com/in/minhtt159/
+linkedin_page: minhtt159
 instagram_username: hnimnart
 
 # Navigation
