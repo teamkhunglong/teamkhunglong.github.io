@@ -26,7 +26,7 @@ tagline: Nhà của đội Khủng Long!
 description: Nhà của đội Khủng Long siêu cấp cute các thứ!
 
 # URL Stuffs
-baseurl: /blog # the subpath of your site, e.g. /support
+# baseurl: /blog # the subpath of your site, e.g. /support
 url: https://teamkhunglong.com # the base hostname AND PROTOCOL for your site, e.g. http://example.com
 site.github.url: https://teamkhunglong.github.io
 
