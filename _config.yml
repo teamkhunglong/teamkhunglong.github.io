@@ -74,6 +74,24 @@ help_two_content: Feel free to contact me via email minhtt159[at]teamkhunglong.c
 help_two_button: Facebook
 help_two_link: https://facebook.com/minhtt159
 
+# Dependencies
+markdown:         kramdown
+highlighter:      rouge
+kramdown:
+  input: GFM
+  hard_wrap: false
+  syntax_highlighter: rouge
+  # https://github.com/jekyll/jekyll/issues/4619#issuecomment-191267346
+  syntax_highlighter_opts:
+    # Rouge Options › https://github.com/jneen/rouge#full-options
+    css_class: 'highlight'
+    #line_numbers: true # bad idea, spans don't need linenos and would inherit this option
+    span:
+      line_numbers: false
+    block:
+      line_numbers: true
+      start_line: 1
+
 # Build settings
 theme: minima
 plugins:
