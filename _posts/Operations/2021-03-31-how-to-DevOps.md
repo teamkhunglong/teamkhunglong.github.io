@@ -57,4 +57,57 @@ Ngoài ra, để làm Devops, bạn cần biết về cách quản lý network b
 
 # Level 2
 
-to be continue 
+Đến đây, mọi thứ có khi sẽ không còn vui vẻ như lúc đầu. Có thể bạn sẽ bắt đầu debug từ 8h tối hôm trước đến 6h sáng hôm sau mà không biết tại sao nó lại thế. Nhưng điều đó quan trọng, đây là xương sống của mọi thứ sau này. 
+
+Level này lại gồm 3 phần nhỏ, nhưng thật ra mỗi phần lại có thể là một bài blog riêng biệt. 
+
+## Hệ thống mạng (networking)
+
+Không thể nào mà làm DevOps mà không biết về networking. Nếu mà ở trên nói về phần Dev, thì ở đây làm về phần Ops. Nếu OS là bê tông, thì Network là móng nhà. Đã rất nhiều lần mình phải đập hệ thống đi xây lại từ đầu vì mình thay đổi Network architecture. Vậy nên, việc có kiến thức về hệ thống mạng rất quan trọng.
+
+Mình học Khoa học Máy tính (CompSci), không phải chuyên ngành về Network, nên những kiến thức ở đây mình cũng chỉ học tay ngang, khi cần cái gì mình sẽ học. Ở bước này, bạn nên đã có một dịch vụ nào đó đang chạy để định hình được làm sao để expose dịch vụ đó ra mạng Internet. Mình thì hay dùng nginx cho dễ, hoặc python http-server còn dễ hơn. 
+
+Ý tưởng của phần này là hiểu được flow của các gói tin. Nếu khi lập trình, bạn cần phải hiểu control flow của chương trình; thì ở đây, bạn cần hiểu làm sao để người dùng sử dụng được dịch vụ của bạn.
+
+Bắt đầu từ việc dễ nhất như **DHCP/NAT** là gì, làm sao để expose dịch vụ của bạn ra ngoài NAT. Trong lúc đó, bạn nên hiểu được **subnet** là gì? **gateway** là gì? Do hầu hết các dịch vụ cơ bản đều sử dụng giao thức (protocol) cơ bản như TCP / HTTP, bạn cũng nên đọc qua về các giao thức này. 
+
+Sau khi vui vẻ đủ dùng, bạn cần hiểu được **DNS** ý tưởng như thế nào cũng như hoạt động ra làm sao. Ví dụ như việc bạn truy cập vào blog này sử dụng domain [teamkhunglong.com](https://teamkhunglong.com) thay vì một địa chỉ IP nào đó. Với mô hình nhỏ hơn như Kubernetes, thông thường những dịch vụ chạy trên đó cũng được tương tác với nhau hay được quản lý qua domain thay vì IP.
+
+Sau đó, chúng ta cần trang bị những kiến thức cụ thể về DevOps ví dụ như Load Balancer hay Proxy Server. Làm sao khi người dùng truy cập vào domain [teamkhunglong.com](https://teamkhunglong.com), sau khi phân giải tên miền đến địa chỉ front-end, làm sao để nó được kết nối đến back-end. Những thuật toán load-balencing gồm có những gì. Làm sao để dựng proxy server để những VM / Container đứng sau mạng ảo có thể kết nối được với internet bên ngoài.
+
+Thêm nữa, điều khá quan trọng và không thể thiếu được đó là firewall. Làm sao để chặn truy vấn đến các cổng được mở ra mạng Internet, làm sao để forward cổng dịch vụ được yêu cầu từ trong VM / Container ra mạng ngoài và chặn những cổng dịch vụ khác không cần thiết (ví dụ như port 22 SSH).
+
+## Containerization
+
+Nãy giờ nói về VM / Container nhiều rồi, mình cũng cần phải nói qua xem đây là cái gì.
+
+Nếu bạn đang sử dụng Windows mà muốn dùng thử qua Ubuntu, khả năng cao bạn sẽ sử dụng phần mềm ảo hoá (virtual machine) ví dụ như VMWare. VMWare hay những phần mềm ảo hoá khác ví dụ như VirtualBox, Nox, Qemu, ... có nhiệm vụ giả lập một môi trường khác, đơn cử trong trường hợp này là Windows ảo hoá Linux. Công nghệ này gọi là **Virtualization**.
+
+Bên cạnh đó, nếu bạn không cần giả lập cả một hệ điều hành, mà bạn vẫn muốn môi trường của mình được sạch sẽ khi deploy dịch vụ, tránh trường hợp *"ơ anh ơi nó chạy trên máy em bình thường mà"*; thì bạn phải có một công nghệ khác gọi là **Containerization**.
+
+Trong trường hợp bạn cần có cả ảo hoá lẫn container hoặc các dịch vụ quản lý khác; hệ thống **Containerized on Virtualized** khá ổn và đa số các dịch vụ online đang sử dụng.
+
+![][1]{:height="100%" width="100%"}
+
+Nói tóm lại, công nghệ Containerization được định nghĩa là một môi trường độc lập, riêng biệt với hệ điều hành chủ. Ở đây, mình sẽ ưu tiên dùng Docker vì có nhiều hướng dẫn online để getting started with Docker, cũng như mình sử dụng Docker hàng ngày, thậm chí để build chiếc blog này ở local.
+
+## Dịch vụ đám mây (cloud serivce)
+
+Cuộc chơi DevOps hiện nay có 3 dân chơi chính là Amazon (AWS), Microsoft (Azure) và Google (Cloud). Về cơ bản, những công ty này tạo ra các dịch vụ để giúp công ty / doanh nghiệp deploy dịch vụ nhanh hơn, cũng là nguồn thu nhập chính.
+
+Những tính năng có thể kể đến ví dụ như Datablob / Datalake, Virtual Machine / Virtual Network, Public IP, SQL Server, đến những dịch vụ khủng như Application Insight, Container Registry, Key Vault / Event Grid hay thậm chí có thể quản lý cả một mạng Kubernetes.
+
+Tất cả những dân chơi này đều cung cấp phiên bản dùng thử hay phiên bản miễn phí cho người chơi thử nghiện. Một ngày đẹp trời, bạn mở billing ra thấy vài chục ngàn $ cũng là chuyện bình thường.
+
+Mình thì không có nhiều tiền, nên mình thường làm homelab tại nhà và mua các linh kiện tương ứng. Dù sao thì làm homelab on the budget thì cũng oke, nếu không làm được thì mở quán net cũng được. Chứ mỗi tháng đóng họ cho Cloud Service cũng hơi căng thẳng.
+
+# Level 3
+
+to be continue
+
+Nhá chút cái big picture cho DevOps
+
+![][2]{:height="100%" width="100%"}
+
+[1]: {{ site.baseurl }}/assets/2021/03/deployment-and-container.png "Deployment & Container"
+[2]: {{ site.baseurl }}/assets/2021/03/devops-big-picture.png "DevOps big picture"
