@@ -7,7 +7,7 @@ author: minh
 short-description: Getting started with DevOps
 ---
 
-ref: [link](https://www.youtube.com/watch?v=5pxbp6FyTfk)
+ref: [link 1](https://www.youtube.com/watch?v=5pxbp6FyTfk) [link 2](https://www.youtube.com/watch?v=9pZ2xmsSDdo)
 
 # Giới thiệu
 
@@ -103,9 +103,58 @@ Mình thì không có nhiều tiền, nên mình thường làm homelab tại nh
 
 # Level 3
 
-to be continue
+Sau khi có xương sống cho một hệ thống DevOps, những thứ sau *optional but crucial, your choice* :shrug:
 
-Nhá chút cái big picture cho DevOps
+Đến bước này, tất cả lựa chọn đều là của bạn, nhưng về cơ bản, để làm DevOps chuẩn bài nên có những bước như sau
+
+## Infrastructure as code
+
+Cơ sở hạ tầng nghe to lắm, nhưng thực ra chỉ có 3 phần lớn cơ bản:
+- Dev / Test
+- Staging
+- Production
+
+Ý tưởng của 3 hệ thống riêng biệt như vậy là để Dev code những tính năng, sau đó chạy qua 1 lượt Unittest. Sau đó, chương trình / dịch vụ được build ra artifacts để đến bước Staging. Ở bước này, đội tester sẽ có hàng để check lại một lượt cuối trước khi ra Production. Bởi quản lý 3 hệ thống về cơ bản giống nhau, ta không nên làm thủ công mà nên tự động chúng. Và lúc đó, Teraform vào việc.
+
+## CI/CD
+
+Trong đầu mình mỗi khi nhìn vào Continuous Intergration / Continuous Delivery thì mình nghĩ ngay đến term "tự diễn biến / tự chuyển hoá".
+
+Về cơ bản, code của Dev khi được push lên Dev branch, nó sẽ được verify bởi nhiều yếu tố khác nhau:
+1. Code có build được không?
+2. Code có pass unit test không?
+3. Code có "đẹp" không?
+4. Code có đảm bảo an toàn bảo mật / các tiêu chuẩn ISO không?
+5. Code có va chạm với các code cũ không?
+6. Code mới được phủ bao nhiêu phần trăm?
+
+Những yếu tố trên không đảm bảo đầy đủ, nhưng ý mình là nó sẽ có một vài tiêu chuẩn như vậy. Để được merge vào master / main, code của Dev phải đảm bảo được tất cả những thứ đó. Nhưng mà, để mà commit nào cũng làm thủ công thì hơi căng thẳng, nên ta cần phải có CI/CD.
+
+Tool để làm CI/CD thì vô vàn, dễ nhất là dựng 1 VM rồi đăng kí vào Agent pool để mỗi khi có commit nó sẽ tự động kéo về build. Vấn đề là, đến khi có nhiều Dev, việc 1 agent không thể đảm nhiệm được hết công việc; vì vậy, chúng ta cần nhiều Agent và chạy on-demand. Có thể kể đến Travis-CI, Jenkins làm nhiệm vụ này rất tốt. Thậm chí, ta có thể sử dụng Kubernetes để làm CI/CD. Ý tưởng vẫn như cũ.
+
+## Orchestration
+
+Để nói về DevOps mà không có Orchestration thì chắc không gọi là DevOps. Làm sao có thể tự động hoá mà không có kịch bản? 
+
+Ví dụ thế này, mình đang làm một work flow tương tác với database. Mỗi khi nào có data mới được đẩy vào database, mình cần phải gọi một worker để deal với database đó. Câu hỏi đặt ra là làm sao để tối ưu?
+
+Hoặc là, mình có 1 chiếc front-end, 1 chiếc back-end, 1 chiếc load-balancer, 1 chiếc database, hoặc sau này mình sẽ cần scale lên nhiều front-end chẳng hạn. Làm sao để có thể tự động hoá được, và làm sao để có redundancy?
+
+Khi ấy, thay vì làm thủ công các công việc, ta có để đóng hết vào trong Container và đưa vào một hệ thống quản lý như Kubernetes. Ý tưởng của Kubernetes quản lý các Container theo "kịch bản". Ngoài ra, Kubernetes có thể tạo được redundancy nhanh chóng, có thể scale dễ dàng. Như ý tưởng bên trên, ta có thể tạo một service làm CI/CD agent và chạy trên hệ thống Kubernetes vì về cơ bản agent bản chất cũng là một Container. Ngoài Deployment Application, ta có thể tạo Job, chạy on-demand.
+
+Người chơi hệ Kubernetes có rất nhiều trên thị trường. Hiện tại mình đang tự dựng vài node cluster ở nhà, cũng như sử dụng Azure Kubernetes Service ở công ty. Theo như mình biết, Amazon cũng có dịch vụ này.
+
+Thậm chí, ta có thể tạo kịch bản ngay trên giao diện với Azure App Insights cũng như Rancher cho custom Node. Ez devops?
+
+## Monitoring
+
+Cuối cùng, cũng không kém phần quan trọng, đó là monitoring. Làm sao để biết được khi nào thì job completed, khi nào thì service hang? Resource dùng đã hết chưa, hay dùng bao nhiêu %? Có cần scale hệ thống lên tiếp không hay bị bottle-neck ở đâu?
+
+Khi ấy, ta cần một tool làm nhiệm vụ giám sát hệ thống. Cũng có rất nhiều tool để làm việc này, trong số đó có Prometheus, Splunk, ... làm nhiệm vụ này rất tốt, và có giao diện web, thay vì phải dùng kubectl cli.
+
+# Kết luận
+
+Sau khi tổng kết lại, ta có Tech Stack như sau để nhúng một chân vào cuộc chơi DevOps. Trông có vẻ nhiều, nhưng không hẳn là phải master hết tất cả công cụ để có thể làm được. Hi, chúc các bạn may mắn ~~
 
 ![][2]{:height="100%" width="100%"}
 
