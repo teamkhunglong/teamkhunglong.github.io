@@ -135,29 +135,71 @@ Là các dịch vụ khác của Kubernetes như DaemonSets, Deployments, ... th
 
 ### Kubernetes API 
 
-API, là thành phần core trong Kubernetes, được cung cấp cho người dùng để tương tác với thực thể (object) trong Kubernetes. Người dùng, những như các Node sẽ tương tác với mạng Kubernetes qua các API này.
+API, là thành phần core trong Kubernetes, được cung cấp cho người dùng để tương tác với đối tượng (object) trong Kubernetes. Người dùng, những như các Node sẽ tương tác với mạng Kubernetes qua các API này.
 
 Có thể kể đến `kubectl` hay `kubeadm` là những tool rất tiện lợi để tương tác với Kubernetes Cluster.
 
-### Thực thể trong Kubernetes
+### Đối tượng trong Kubernetes
 
 #### Kubernetes Object là gì
 
+Kubernetes Object là một thực thể cụ thể trong hệ thống Kubernetes, những thực thể này mô tả trạng thái của Cluster. Cụ thể hơn:
+- Ứng dụng nào đang được chạy, và được chạy trong Node nào.
+- Tài nguyên có sẵn cho các ứng dụng.
+- Các luật được áp dụng cho ứng dụng. Ví dụ như khả năng tự khởi động lại, tự sửa lỗi, hay tự nâng cấp.
+
+Kubernetes Object có 2 trường cần lưu ý là `Spec` và `Status`.
+- Spec: trang thái mong muốn của đối tượng. Ví dụ: ứng dụng này sẽ triển khai docker images nginx.
+- Status: trạng thái hiện tại của đối tượng. Ví dụ: ứng dụng này có 1 phiên bản đang được chạy, 2 phiên bản khác đang được triển khai.
+
+Tìm hiểu thêm về việc mô tả (describe) một đối tượng ở [đây](https://kubernetes.io/docs/concepts/overview/working-with-objects/kubernetes-objects/#describing-a-kubernetes-object)
+
 #### Quản lý Kubernetes Object
+
+Trong đa số trường hợp, chúng ta sẽ sử dụng công cụ `kubectl` để quản lý các đối tượng trong mạng Kubernetes. Có 3 cách để điều khiển một đối tượng:
+1. Imperative commands: sử dụng câu lệnh để điều khiển trực tiếp đối tượng.
+2. Imperative object configuration: sử dụng file cấu hình để điều khiển đối tượng.
+3. Declarative object configuration: sử dụng tập hợp các file cấu hình để điều khiển một hoặc nhiều đối tượng.
 
 #### Name & ID 
 
+Name và ID được sinh ra để phân biệt giữa các đối tượng trong một loại tài nguyên cụ thể. Ví dụ:
+- 2 Pod không thể cùng tên là `myapp-123`
+- Pod có thể tên là `myapp-123` và Deployment hay Job đồng thời cũng có thể tên là `myapp-123`
+
+Để truy cập vào đối tượng này, có thể sử dụng API tại `/api/v1/pods/some-name`.
+
 #### Namespace
+
+Namespace được sinh ra với nhiệm vụ làm một môi trường ảo, phân biệt với môi trường thật. Giả sử ta chỉ có 1 Cluster vật lý, nhưng lại có 2 môi trường Dev và Prodcution, thì ta có thể tạo ra 2 namespace để phân biệt 2 môi trường với nhau.
+
+Có thể xem những namespace với câu lệnh `kubectl get namespace`
+
+Lưu ý, có những đối tượng `nằm trong namespace` ví dụ như mạng ảo; nhưng lại có những đối tượng `không nằm trong namespace` ví dụ như storage.
 
 #### Label & Selector
 
+Label là một cặp `key-value` để quản lý đối tượng dễ hơn, cụ thể hơn so với `namespace`. Thêm nữa, người dùng có thể tự tạo label một cách tuỳ ý. Ví dụ:
+- "release" : "stable", "release" : "canary"
+- "environment" : "dev", "environment" : "qa", "environment" : "production"
+- "tier" : "frontend", "tier" : "backend", "tier" : "cache"
+- "partition" : "customerA", "partition" : "customerB"
+- "track" : "daily", "track" : "weekly"
+
+Có thể sử dụng Selector hay NodeSelector để chỉ định Pod sẽ được chạy trên một node nào đó phù hợp.
+
 #### Annotaion
 
-#### Field Selector
+Giống với Label, nhưng Annotation hướng đến những metadata lớn hơn và tự động so với Label. Ví dụ:
+- Thông tin về timestamps, release IDs, git branch, PR numbers, image hashes, và registry address :shrug:
+- Các endpoint về nhật kí, giám sát hoặc cảnh báo.
+- Các thông tin về phiên bản thư viện 3rd party.
+- Vân vân, ...
 
-#### Recommend Label
+# Kết luận
 
-to-be-continue
+Bài blog này đã giới thiệu qua một số thuật ngữ trong Kubernetes cũng như một vài use case khi nào nên sử dụng Kubernetes. Bài blog tiếp theo trong chuỗi series có thể sẽ nói về các ý tưởng về Container hay Workload, những real case scenario khi triển khai một công việc DevOps.
+#GLHF
 
 [1]: {{ site.baseurl }}/assets/2021/04/container_evolution.svg "Container Evolution"
 [2]: {{ site.baseurl }}/assets/2021/04/components-of-kubernetes.svg "Components of Kubernetes"
