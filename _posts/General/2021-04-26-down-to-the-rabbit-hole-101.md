@@ -13,10 +13,10 @@ Series này chủ yếu sẽ nói về những khó khăn khi làm một chiếc
 
 Ước mơ của mình là có một closed-network, cung cấp những dịch vụ thiết yếu cho bản thân. Có những dịch vụ gì thì cùng tìm hiểu thôi :) 
 
-1. [Crypto Mining]({{ site.baseurl }}/hacks/2021-04-26-crypto-mining)
+1. [Crypto Mining]({{ site.baseurl }}/hacks/crypto-mining)
 
 Datacenter Overview
 
 ![][1]{:height="100%" width="100%"}
 
-[1]{{ site.baseurl }}/assets/2021/04/DC-overview.png "Datacenter Overview"
+[1]: {{ site.baseurl }}/assets/2021/04/DC-overview.png "Datacenter Overview"
