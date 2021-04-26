@@ -15,3 +15,6 @@ capture-the-flag:
 general:
   name: General
   description: Non-tech stuffs
+hacks:
+  name: hacks
+  description: Non-security hacks
