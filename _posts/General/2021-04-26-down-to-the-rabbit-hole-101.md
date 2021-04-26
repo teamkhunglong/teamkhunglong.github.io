@@ -11,14 +11,14 @@ Cũng gần được 1 tháng rồi từ khi mình viết bài blog cuối. Blog
 
 Series này chủ yếu sẽ nói về những khó khăn khi làm một chiếc homelab tại nhà. Homelab chắc sẽ là một điều khá thú vị trong một vài năm tới, khi mà những thiết bị IoT dễ dàng tiếp cận hơn, cũng như những ứng dụng IoT càng trở nên hiện đại hơn. Thêm nữa, không phải hầu hết mọi người đều sử dụng PC cấu hình cao hoặc laptop / workstation.
 
-Ước mơ của mình là có một closed-network, cung cấp những dịch vụ thiết yếu cho bản thân. Có những dịch vụ gì thì cùng tìm hiểu thôi :) 
+Mục tiêu của mình là có một closed-network, cung cấp những dịch vụ thiết yếu cho bản thân. Có những dịch vụ gì thì cùng tìm hiểu thôi :) 
 
 1. ~~[Router & Firewall]({{ site.baseurl }}/hacks/opnsense-or-pfsense)~~
 2. ~~[Cluster]({{ site.baseurl }}/hacks/proxmox-cluster)~~
 3. ~~[NFS]({{ site.baseurl }}/hacks/synology-on-the-cheap)~~
 4. ~~[ZFS]({{ site.baseurl }}/hacks/how-to-get-19GBps-read)~~
 5. ~~[Plex vs Netflix]({{ site.baseurl }}/hacks/netflix-is-too-expensive)~~
-6. [Crypto Mining]({{ site.baseurl }}/hacks/crypto-mining)~~
+6. [Crypto Mining]({{ site.baseurl }}/hacks/crypto-mining)
 
 Troubleshoot:/
 
@@ -29,4 +29,4 @@ Datacenter Overview
 
 ![][1]{:height="50%" width="50%"}
 
-[1]: {{ site.baseurl }}/assets/2021/04/DC-overview.png "Datacenter Overview"
+[1]: {{ site.baseurl }}/assets/2021/04/DC-overview.png#center "Datacenter Overview"
