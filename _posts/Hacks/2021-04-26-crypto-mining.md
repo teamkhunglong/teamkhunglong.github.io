@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Crypto Mining"
-date: 2020-04-26 17:00:00 +0700
+date: 2021-04-26 17:00:00 +0700
 category: hacks
 author: minh
 short-description: Down to the rabbit hole - ETH mining
@@ -25,7 +25,7 @@ Với các "dân đào chuyên nghiệp", họ sẽ xây một máy đào gồm 
 
 Đối với mình, do mình đã có một vài chiếc Workstation từ trước, nên việc mình cắm thêm GPU vào để đào coin sẽ làm tối ưu năng suất của những máy tính hiện có. Với cách làm này, mình có thể tận dụng CPU / RAM còn thừa để làm những ứng dụng khác, xoay quanh những dịch vụ Homelab chẳng hạn.
 
-Do các phần mềm đào coin chủ yếu nằm trên hệ điều hành Windowx hay hệ điều hành Linux-based, nên mình cần phải có cách nào đó để cung cấp môi trường cho những chiếc card. Tại đây, mình sử dụng phương pháp ảo hoá Windows sử dụng Proxmox và passthrough GPU vào máy ảo. Từ đây, mình bắt đầu đâm đầu vào rabbit hole và không có lối thoát. 
+Do các phần mềm đào coin chủ yếu nằm trên hệ điều hành Windows hay hệ điều hành Linux-based, nên mình cần phải có cách nào đó để cung cấp môi trường cho những chiếc card. Tại đây, mình sử dụng phương pháp ảo hoá Windows sử dụng Proxmox và passthrough GPU vào máy ảo. Từ đây, mình bắt đầu đâm đầu vào rabbit hole và không có lối thoát. 
 
 Mọi chuyện sẽ rất đơn giản nếu mình chỉ cần tạo một vài máy ảo Ubuntu để học lập trình, nhón chân vào DevOps, nhưng khi nói chuyện về việc sử dụng phần cứng, cụ thể ở đây là GPU thì lại là một câu chuyện khác. Phương pháp của mình không sử dụng cài đặt trực tiếp hệ điều hành lên máy tính, nên máy ảo ở chế độ mặc định sẽ không biết nó đang có những phần cứng gì. Để cung cấp phần cứng cho máy ảo, ta cần một tính năng đó là IOMMU (Input–output memory management unit)
 
