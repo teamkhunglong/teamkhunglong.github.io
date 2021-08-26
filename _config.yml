@@ -21,8 +21,8 @@
 # Website title
 # Title | Tagline  # Works on chrome
 #
-title: Team Khủng Long
-tagline: Nhà của đội Khủng Long!
+title: Blog
+tagline: Team Khủng Long
 description: Nhà của đội Khủng Long siêu cấp cute các thứ!
 
 # URL Stuffs
@@ -32,8 +32,8 @@ site.github.url: https://teamkhunglong.github.io
 
 permalink: /:categories/:title
 
-content_type: Team Khủng Long #Define whether this is a knowledge base, help center, or something else
-use_authors: true #Set this to false to disable showing post authors
+content_type: Team Khủng Long # Define whether this is a knowledge base, help center, or something else
+use_authors: true # Set this to false to disable showing post authors
 
 brand_logo: khunglong_w_new.png
 brand_name: Blog
@@ -69,7 +69,7 @@ help_one_button: Github
 help_one_link: https://github.com/teamkhunglong/teamkhunglong.github.io/issues
 
 help_two_title: Contacts
-help_two_content: Feel free to contact me via email minhtt159[at]teamkhunglong.com or facebook messages
+help_two_content: Feel free to contact me via email minhtt159[at]teamkhunglong.com or Facebook messenger.
 help_two_button: Facebook
 help_two_link: https://facebook.com/minhtt159
 
