@@ -1,18 +1,22 @@
-# Teamkhunglong Blog
+New template for teamkhunglong.com
 
-[🌐 github-pages 🌐](https://teamkhunglong.github.io)
+From: https://github.com/cotes2020/jekyll-theme-chirpy/
 
-This public repository is an entrypoint for all of my publication. 
+### Step 3. Running Local Server
 
-This blog will contain:
-- DevSecOps knowledges
-- In-depth security guide
-- Some quirks and tweaks that make lifes better.
+Run the following command in the root directory of the site:
 
-## Odin
+```console
+$ bundle exec jekyll s
+```
 
-I used Odin theme from [TeaGuns](https://github.com/TeaGuns/odin). Odin is a Jekyll template for knowledgebases and support sites. Please see the [official Jekyll docs](https://jekyllrb.com/docs/) for more info on running, building and editing a Jekyll site.
+Or run with Docker:
 
-## Special thanks
+```console
+$ docker run -it --rm \
+    --volume="$PWD:/srv/jekyll" \
+    -p 4000:4000 jekyll/jekyll \
+    jekyll serve
+```
 
-The knowledges in here was made possible by the helps of many friends, both online and offline. Thank you very much.
+After a while, navigate to the site at <http://localhost:4000>.
