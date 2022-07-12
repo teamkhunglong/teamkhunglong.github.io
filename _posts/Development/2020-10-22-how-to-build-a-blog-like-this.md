@@ -69,10 +69,10 @@ Làm web gì mà không chạy SEO? Thật ra, mình rất thích tính năng n�
 
 Do không dùng Wordpress nữa, mình phải tự chạy Analytics cho blog. Mình nghĩ rằng không có công cụ nào khác tuyệt vời hơn [Google Analytics](https://www.google.com/analytics/). Sau khi tạo một chiếc data stream, họ gửi cho mình một đoạn byte để mình add vào [header của blog](https://github.com/teamkhunglong/teamkhunglong.github.io/commit/f73d61d37edc49743f069c1d1979d55481afe5e6). Việc còn lại là của Google lo thôi!
 
-![Google Analytics]({{ site.baseurl }}/assets/2020/10/google-analytics.png#center){:height="70%" width="70%"}
+![Google Analytics]({{ site.baseurl }}/assets/img/2020/10/google-analytics.png#center){:height="70%" width="70%"}
 
 ### Logo
 
-Nói chung là chiếc blog này không thể đẹp được nếu không có logo xịn sò từ em người yêu tuyệt vời. Yêu em <3
+Nói chung là chiếc blog này không thể đẹp được nếu không có logo xịn sò :D
 
 ![Logo]({{ site.baseurl }}/assets/img/2020/10/teamkhunglong-demo.png#center)
