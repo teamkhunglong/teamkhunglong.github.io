@@ -13,16 +13,16 @@ Series này chủ yếu sẽ nói về những khó khăn khi làm một chiếc
 
 Mục tiêu của mình là có một closed-network, cung cấp những dịch vụ thiết yếu cho bản thân. Có những dịch vụ gì thì cùng tìm hiểu thôi :) 
 
-1. ~~[Router & Firewall]({{ site.baseurl }}/hacks/opnsense-or-pfsense)~~
-2. ~~[Cluster]({{ site.baseurl }}/hacks/proxmox-cluster)~~
-3. ~~[NFS]({{ site.baseurl }}/hacks/synology-on-the-cheap)~~
-4. ~~[ZFS]({{ site.baseurl }}/hacks/how-to-get-19GBps-read)~~
-5. ~~[Plex vs Netflix]({{ site.baseurl }}/hacks/netflix-is-too-expensive)~~
-6. [Crypto Mining]({{ site.baseurl }}/hacks/crypto-mining)
+1. ~~[Router & Firewall]~~
+2. ~~[Cluster]~~
+3. ~~[NFS]~~
+4. ~~[ZFS]~~
+5. ~~[Plex vs Netflix]~~
+6. [Crypto Mining]({{ site.baseurl }}/posts/crypto-mining)
 
 Troubleshoot:/
 
-1. ~~[Passthrough]({{ site.baseurl }}/hacks/proxmox-pci-passthrough-in-my-ass)~~
+1. ~~[Passthrough]~~
 2. more-later-on
 
 Datacenter Overview
