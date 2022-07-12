@@ -3,6 +3,7 @@ layout: post
 title: "SVATTT 2020 Online - Merklision"
 date: 2020-10-24 17:00:00 +0700
 category: capture-the-flag
+tags: ctf
 author: minh
 short-description: Giải bài Merklision - Vòng khởi động Sinh viên với An toàn thông tin 2020
 ---
