@@ -15,7 +15,7 @@ Một ngày đẹp trời nào đó, bạn muốn build bản cũ của v8 engin
 
 ![][1]{:height=100% width=100%}
 
-```
+```bash
 Error at //gni/v8.gni:193:3: Dependency not allowed.
   source_set(target_name){ ...
 ```
@@ -38,7 +38,7 @@ Lướt qua internet với từ khóa `Building old revisions`, mình tìm đư�
 
 Giả sử trên source `v8` bạn đã checkout branch hoặc commit cần build rồi. Bạn cần chuyển `gclient` về thời điểm đó.
 
-```
+```bash
 # Lấy thời điểm của phiên bản đã checkout:
 ~/v8/src $ COMMIT_DATE=$(git log -n 1 --pretty=format:%ci)
 
@@ -51,7 +51,7 @@ Giả sử trên source `v8` bạn đã checkout branch hoặc commit cần buil
 
 Do `gclient` hay commit mới có thể thêm một vài file khác, bạn cần clean repo của v8
 
-```
+```bash
 ~/v8/src $ git clean -ffd
 ```
 
@@ -59,7 +59,7 @@ Do `gclient` hay commit mới có thể thêm một vài file khác, bạn cần
 
 Kiểm tra lại phiên bản của các `submodule` trùng khớp trên `gclient`
 
-```
+```bash
 ~/v8/src $ gclient sync -D --force --reset
 ```
 
@@ -67,4 +67,4 @@ Kiểm tra lại phiên bản của các `submodule` trùng khớp trên `gclien
 
 Cuối cùng, bạn build lại như bình thường. Vậy là được!
 
-[1]: {{ site.baseurl }}/assets/2020/10/v8_orig_build_bug.png#center
+[1]: {{ site.baseurl }}/assets/img/2020/10/v8_orig_build_bug.png#center

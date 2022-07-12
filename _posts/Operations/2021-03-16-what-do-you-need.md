@@ -68,6 +68,6 @@ Series DevOps của blog này thực chất là để mình log lại những l�
 
 Hi, that's it for today.
 
-[1]: {{ site.baseurl }}/assets/2021/03/normal-topo.png "Normal Topo"
-[2]: {{ site.baseurl }}/assets/2021/03/normal-vps-network.png "Normal VPS Network"
-[3]: {{ site.baseurl }}/assets/2021/03/my-home-network.png "My Home Network"
+[1]: {{ site.baseurl }}/assets/img/2021/03/normal-topo.png "Normal Topo"
+[2]: {{ site.baseurl }}/assets/img/2021/03/normal-vps-network.png "Normal VPS Network"
+[3]: {{ site.baseurl }}/assets/img/2021/03/my-home-network.png "My Home Network"

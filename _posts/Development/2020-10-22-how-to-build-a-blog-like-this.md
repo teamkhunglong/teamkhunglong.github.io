@@ -29,7 +29,7 @@ Dù như vậy, việc chuyển đổi qua chiếc blog như này có thể gặ
 
 Đầu tiên, tất nhiên rồi, bạn phải có một domain.
 
-![NameCheap Domain]({{ site.baseurl }}/assets/2020/10/name-cheap-domain.png#center "Name Cheap Domain")
+![NameCheap Domain]({{ site.baseurl }}/assets/img/2020/10/name-cheap-domain.png#center "Name Cheap Domain")
 
 Mình vô tình được quản lý một vài domain hay ho, vậy nên mình biết làm sao để mua một chiếc. Ở đây, mình sử dụng `NameCheap` vì thế giới hay dùng. Nếu tiếng anh là một trở ngại đối với bạn, ở Việt Nam có một vài dịch vụ cũng làm việc tương tự như `GoDaddy`, `Nhân Hòa`, `Hostinger`, ...
 
@@ -39,7 +39,7 @@ Với giá 13$/năm đối với domain `.com`, tính ra chưa đến 1k/ngày, 
 
 Mình không biết các trang web lớn họ trỏ DNS qua dịch vụ nào, nhưng ở đây, mình dùng `Cloudflare` vì nó free và có nhiều tiện ích. Ngoài ra, nghe nói một công ty lớn nào đó đang triển khai giải pháp tương tự, bạn có thể xem qua tại [Cloudrity](https://cloudrity.com.vn/ "yêu VCS <3").
 
-![CloudFlare Analytics]({{ site.baseurl }}/assets/2020/10/cloudflare-analytics.png#center "CloudFlare Analytics"){:height="70%" width="70%"}
+![CloudFlare Analytics]({{ site.baseurl }}/assets/img/2020/10/cloudflare-analytics.png#center "CloudFlare Analytics"){:height="70%" width="70%"}
 
 Khi config domain, bạn có thể tạo một [CNAME record](https://en.wikipedia.org/wiki/CNAME_record) để trỏ domain của bạn về trang github.
 
@@ -75,4 +75,4 @@ Do không dùng Wordpress nữa, mình phải tự chạy Analytics cho blog. M�
 
 Nói chung là chiếc blog này không thể đẹp được nếu không có logo xịn sò từ em người yêu tuyệt vời. Yêu em <3
 
-![Logo]({{ site.baseurl }}/assets/2020/10/teamkhunglong-demo.png#center)
+![Logo]({{ site.baseurl }}/assets/img/2020/10/teamkhunglong-demo.png#center)

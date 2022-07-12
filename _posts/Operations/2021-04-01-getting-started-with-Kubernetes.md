@@ -201,5 +201,5 @@ Giống với Label, nhưng Annotation hướng đến những metadata lớn h�
 Bài blog này đã giới thiệu qua một số thuật ngữ trong Kubernetes cũng như một vài use case khi nào nên sử dụng Kubernetes. Bài blog tiếp theo trong chuỗi series có thể sẽ nói về các ý tưởng về Container hay Workload, những real case scenario khi triển khai một công việc DevOps.
 #GLHF
 
-[1]: {{ site.baseurl }}/assets/2021/04/container_evolution.svg "Container Evolution"
-[2]: {{ site.baseurl }}/assets/2021/04/components-of-kubernetes.svg "Components of Kubernetes"
+[1]: {{ site.baseurl }}/assets/img/2021/04/container_evolution.svg "Container Evolution"
+[2]: {{ site.baseurl }}/assets/img/2021/04/components-of-kubernetes.svg "Components of Kubernetes"

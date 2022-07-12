@@ -158,5 +158,5 @@ Sau khi tổng kết lại, ta có Tech Stack như sau để nhúng một chân 
 
 ![][2]{:height="100%" width="100%"}
 
-[1]: {{ site.baseurl }}/assets/2021/03/deployment-and-container.png "Deployment & Container"
-[2]: {{ site.baseurl }}/assets/2021/03/devops-big-picture.png "DevOps big picture"
+[1]: {{ site.baseurl }}/assets/img/2021/03/deployment-and-container.png "Deployment & Container"
+[2]: {{ site.baseurl }}/assets/img/2021/03/devops-big-picture.png "DevOps big picture"

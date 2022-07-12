@@ -107,7 +107,7 @@ Thuật toán của mình như sau:
 
 Code mình có lưu lại tại [đây](https://gist.github.com/minhtt159/af8e19e2ac7088be48889ccd5c6e0e0b#file-merklision_solve-py)
 
-```
+```bash
 $ python .\merklision.py
 Maximum length can collide is 2048
 There are 2047 collisions
@@ -120,7 +120,7 @@ Trong thời gian thi (4 tiếng), hình như có 5 đội giải được bài 
 
 ![][4]{:height="50%" width="50%"}
 
-[1]: {{ site.baseurl }}/assets/2020/10/get-help-merklision.png#center
+[1]: {{ site.baseurl }}/assets/img/2020/10/get-help-merklision.png#center
 [2]: https://flawed.net.nz/assets/hash_tree-svg.png
-[3]: {{ site.baseurl }}/assets/2020/10/odd-length-merklehash.png#center
-[4]: {{ site.baseurl }}/assets/2020/10/merklision-outro.png#center
+[3]: {{ site.baseurl }}/assets/img/2020/10/odd-length-merklehash.png#center
+[4]: {{ site.baseurl }}/assets/img/2020/10/merklision-outro.png#center

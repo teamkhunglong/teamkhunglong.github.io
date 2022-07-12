@@ -29,4 +29,4 @@ Datacenter Overview
 
 ![][1]{:height="50%" width="50%"}
 
-[1]: {{ site.baseurl }}/assets/2021/04/DC-overview.png#center "Datacenter Overview"
+[1]: {{ site.baseurl }}/assets/img/2021/04/DC-overview.png#center "Datacenter Overview"
