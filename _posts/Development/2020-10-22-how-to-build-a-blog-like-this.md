@@ -45,7 +45,7 @@ Khi config domain, bạn có thể tạo một [CNAME record](https://en.wikiped
 
 #### Mail Service (Optional)
 
-Khi quản lý mail của `matesctf.org`, mình được tiếp cận với những hệ thống mã nguồn mở rất bá, trong đó có Zoho. Zoho cho phép bạn tạo một Email Hosting miến phí, điểm bất lợi là bạn chỉ có thể tạo số lượng user giới hạn (hình như là 5 users). Do đó, từ bây giờ bạn có thể gửi thư điện tử cho mình qua email [minhtt159@teamkhunglong.com](mailto://minhtt159@teamkhunglong.com).
+Khi quản lý mail của `matesctf.org`, mình được tiếp cận với những hệ thống mã nguồn mở rất bá, trong đó có Zoho. Zoho cho phép bạn tạo một Email Hosting miến phí, điểm bất lợi là bạn chỉ có thể tạo số lượng user giới hạn (hình như là 5 users). Do đó, từ bây giờ bạn có thể gửi thư điện tử cho mình qua email [minhtt159@teamkhunglong.com](mailto:minhtt159@teamkhunglong.com).
 
 ### Github Pages
 

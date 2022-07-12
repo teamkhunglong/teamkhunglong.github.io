@@ -15,17 +15,17 @@ TL;DR: [ghcr-tictactoe](https://github.com/minhtt159/ghcr-tictactoe)
 
 Tại post này, mình sẽ bày cho các bạn cách để tạo một workflow như vậy. Bài này gồm có các bước như sau:
 
-1. [ETH Miner - GPU driver](#Miner)
-2. [Docker - Container Registry - Github](#Docker-Container-Registry-Github)
-3. [Kubernetes on cloud](#Kubernetes)
+1. [ETH Miner - GPU driver](#miner)
+2. [Docker - Container Registry - Github](#cicd)
+3. [Kubernetes on cloud](#kubernetes)
 
-### Miner
+# Miner
 
 Trước hết, ta sẽ cần biết cách sử dụng phần mềm đào coin. Có rất nhiều phần mềm dễ sử dụng với mức fee phải chăng như `Phoenix Miner` hay `T-rex Miner`. Những phần mềm này thường sẽ switch qua để đào cho author với mức fee là 1% với mỗi đồng mà bạn kiếm được. Do T-rex miner hỗ trợ Linux khá tốt, nên guide này sẽ tích hợp nói về T-rex.
 
 Việc sử dụng T-rex đơn giản là đọc commandline options và điền vào các trường tương ứng ([link](https://github.com/trexminer/T-Rex))
 
-### Docker - Container Registry - Github
+# CICD
 
 Mục đích cuối cùng của blog này là làm sao để scale khi bạn có nhiều tài nguyên. Khi ấy, mình sẽ nghĩ đến sử dụng Container.
 
@@ -37,7 +37,7 @@ Nếu những thuật ngữ trên khó hiểu, thì có thể bạn không phả
 
 Do đó, mình sử dụng Github, một nơi lý tưởng để làm việc này. Hơn nữa, nó miễn phí. Dù sao thì mình cũng cần một nơi để CI/CD, tiện có Github workflow, mình sẽ thử sử dụng nó xem sao.
 
-#### Step 1: Dockerfile
+## Step 1: Dockerfile
 
 Tạo một Docker image trên máy dev để make sure là code chạy được trên môi trường production. Khi dev, có thể test bằng cách enable GPU cho container ([ref](https://docs.docker.com/compose/gpu-support/)).
 
@@ -45,7 +45,7 @@ Lưu ý:
 - Trên môi trường thực tế, thành phần enable GPU engine cho container không phải là Docker.
 - Do mình sẽ sử dụng lại tool của người khác, nên mình sẽ đụng vào ít thứ nhất có thể.
 
-#### Step 2: Github CI/CD
+## Step 2: Github CI/CD
 
 Tạo một Github repo, và setup CI/CD pipeline lên đó ([ref](https://docs.github.com/en/actions/guides/publishing-docker-images#publishing-images-to-github-packages)). Github thậm chí còn cho host free một container registry với dung lượng đến 500MB, quá đủ cho một mining container. 
 
@@ -54,7 +54,7 @@ Sau khi setup, Github sẽ tự build package cho bạn, và bạn có thể ké
 Lưu ý:
 - Bạn có thể dự làm agent và đẩy lên một container registry khác, ví dụ như Gitlab & Dockerhub, thậm chí self-hosted-CR. Ở đây mình sử dụng Github để đơn giản hoá vấn đề.
 
-### Kubernetes
+# Kubernetes
 
 Khi có được image trên `container registry`, bạn sẽ mang nó về deploy lên `kubernetes`. Có một vài vấn đề quan trọng cần lưu ý:
 
