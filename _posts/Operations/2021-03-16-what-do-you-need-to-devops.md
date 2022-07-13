@@ -1,8 +1,9 @@
 ---
 layout: post
-title: "What do you need?"
+title: "What do you need to DevOps?"
 date: 2021-03-16 21:50:00 +0700
 category: operations
+tags: operations devops
 author: minh
 short-description: This blog seems cool, what now?
 ---
@@ -26,7 +27,7 @@ Mặc dù vậy, giả sử một ngày đẹp trời, bạn muốn điều khi�
 Với những tiện ích có sẵn, chắc chắn các bạn sẽ chọn những dịch vụ như [TeamViewer](https://www.teamviewer.com/en/), [AnyDesk](https://anydesk.com/en), [Chrome Remote Desktop](https://remotedesktop.google.com/). Những dịch vụ này hoạt động rất tốt công việc của mình. Bên cạnh đó, có một vài điểm yếu chết người như sau:
 1. TeamViewer: Phải trả phí nếu không dùng "cá nhân"
 2. AnyDesk: Như TeamViewer nhưng lại ít chức năng hơn
-3. Chrome Remote Desktop: **MIỄN PHÍ** nhưng phải dùng qua Chrome, không pass-through được vài tổ hợp phím liên quan đến trình duyệt, ví dụ Ctrl-W
+3. Chrome Remote Desktop: *MIỄN PHÍ* nhưng phải dùng qua Chrome, không pass-through được vài tổ hợp phím liên quan đến trình duyệt, ví dụ Ctrl-W
 
 Do mình lười, lại còn nghèo, nên mình quyết định mua một chiếc VPS cơ bản nhất với mức giá 5$/tháng. Rõ ràng là việc mua VPS rẻ hơn mua TeamViewer (24.9$), mà mua VPS lại còn làm được nhiều thứ nữa. Ví dụ như sau:
 

@@ -4,6 +4,7 @@ title: "Getting started with Kubernetes"
 date: 2021-04-01 09:00:00 +0700
 category: operations
 author: minh
+tags: operations kubernetes
 short-description: Kubernetes - Overview Concept (my pain in the ass)
 ---
 

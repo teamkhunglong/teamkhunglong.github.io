@@ -108,8 +108,8 @@ Thuật toán của mình như sau:
 
 Code mình có lưu lại tại [đây](https://gist.github.com/minhtt159/af8e19e2ac7088be48889ccd5c6e0e0b#file-merklision_solve-py)
 
-```bash
-$ python .\merklision.py
+```console
+$ python ./merklision.py
 Maximum length can collide is 2048
 There are 2047 collisions
 Takes 11 sec to produce

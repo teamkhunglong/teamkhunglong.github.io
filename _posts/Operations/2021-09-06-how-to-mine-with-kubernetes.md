@@ -4,6 +4,7 @@ title: "How to mine with kubernetes"
 date: 2021-09-06 09:00:00 +0700
 category: operations
 author: minh
+tags: operations mining
 short-description: ETH miner - Container Registry - Kubenetes
 ---
 
@@ -13,11 +14,7 @@ TL;DR: [ghcr-tictactoe](https://github.com/minhtt159/ghcr-tictactoe)
 
 Ở post trước, mình có đề cập tới việc chạy miner sử dụng Kubernetes on cloud. Mình đã từng chạy thử và nó hoàn toàn có thể thực hiện được chỉ qua vài dòng code, nhiều khi còn miễn phí.
 
-Tại post này, mình sẽ bày cho các bạn cách để tạo một workflow như vậy. Bài này gồm có các bước như sau:
-
-1. [ETH Miner - GPU driver](#miner)
-2. [Docker - Container Registry - Github](#cicd)
-3. [Kubernetes on cloud](#kubernetes)
+Tại post này, mình sẽ bày cho các bạn cách để tạo một workflow như vậy
 
 # Miner
 

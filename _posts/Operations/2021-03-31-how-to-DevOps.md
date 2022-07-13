@@ -4,6 +4,7 @@ title: "How to DevOps 101"
 date: 2021-03-31 09:00:00 +0700
 category: operations
 author: minh
+tags: operations devops kubernetes
 short-description: Getting started with DevOps
 ---
 
@@ -49,7 +50,7 @@ Nhiều bạn năm 1 năm 2, mới học IT, luôn bị choáng ngợp bởi cá
 
 Mình không bảo Linux khủng hơn Windows hay macOS, nhưng những khó khăn bạn đang gặp phải thường giải quyết rất dễ trên Linux. Cụ thể là Ubuntu là một Linux Distro khá thân thiện với người dùng, và cộng đồng cũng hỗ trợ thân thiện hơn nếu bạn dùng Ubuntu. Dù sao, hệ điều hành cũng chỉ là một công cụ, bạn thích cái nào thì dùng cái đó thôi. Như mình, mình dùng macOS khá lâu rồi, nên mình hiểu được cách sử dụng hệ điều hành này. Nếu bạn quen Windows, việc đó cũng oke.
 
-Nếu bạn muốn nhón chân vào DevOps, bạn nên biết sử dụng Linux và những command cơ bản. Cách hệ điều hành quản lý người dùng / quản lý file. Lại nói về tập đoàn tư bản to nhất VN, vẫn là những người lương ngàn $, **không hiểu ý tưởng chown / chmod là gì; scp báo không có quyền mà ngồi cả một buổi chiều không xử lý được; hay là không biết copy folder mà không có giao diện; không biết mount ổ cứng cơ bản**
+Nếu bạn muốn nhón chân vào DevOps, bạn nên biết sử dụng Linux và những command cơ bản. Cách hệ điều hành quản lý người dùng / quản lý file. Lại nói về tập đoàn tư bản to nhất VN, vẫn là những người lương ngàn $, không hiểu ý tưởng chown / chmod là gì; scp báo không có quyền mà ngồi cả một buổi chiều không xử lý được; hay là không biết copy folder mà không có giao diện; không biết mount ổ cứng cơ bản
 
 Khi làm quen với Linux, bạn cần biết sử dụng một vài text editor cơ bản như nano / vim. Để học vim hay emacs thì lại là có thể là một bài blog cực dài khác, nhưng về cơ bản, bạn có thể dùng bất kì công cụ gì mà bạn muốn, miễn là nó work.
 
@@ -65,15 +66,15 @@ Level này lại gồm 3 phần nhỏ, nhưng thật ra mỗi phần lại có t
 
 Không thể nào mà làm DevOps mà không biết về networking. Nếu mà ở trên nói về phần Dev, thì ở đây làm về phần Ops. Nếu OS là bê tông, thì Network là móng nhà. Đã rất nhiều lần mình phải đập hệ thống đi xây lại từ đầu vì mình thay đổi Network architecture. Vậy nên, việc có kiến thức về hệ thống mạng rất quan trọng.
 
-Mình học Khoa học Máy tính (CompSci), không phải chuyên ngành về Network, nên những kiến thức ở đây mình cũng chỉ học tay ngang, khi cần cái gì mình sẽ học. Ở bước này, bạn nên đã có một dịch vụ nào đó đang chạy để định hình được làm sao để expose dịch vụ đó ra mạng Internet. Mình thì hay dùng nginx cho dễ, hoặc python http-server còn dễ hơn. 
+Mình học Khoa học Máy tính (Computer Science), không phải chuyên ngành về Network, nên những kiến thức ở đây mình cũng chỉ học tay ngang, khi cần cái gì mình sẽ học. Ở bước này, bạn nên đã có một dịch vụ nào đó đang chạy để định hình được làm sao để expose dịch vụ đó ra mạng Internet. Mình thì hay dùng nginx cho dễ, hoặc python http-server còn dễ hơn. 
 
 Ý tưởng của phần này là hiểu được flow của các gói tin. Nếu khi lập trình, bạn cần phải hiểu control flow của chương trình; thì ở đây, bạn cần hiểu làm sao để người dùng sử dụng được dịch vụ của bạn.
 
 Bắt đầu từ việc dễ nhất như **DHCP/NAT** là gì, làm sao để expose dịch vụ của bạn ra ngoài NAT. Trong lúc đó, bạn nên hiểu được **subnet** là gì? **gateway** là gì? Do hầu hết các dịch vụ cơ bản đều sử dụng giao thức (protocol) cơ bản như TCP / HTTP, bạn cũng nên đọc qua về các giao thức này. 
 
-Sau khi vui vẻ đủ dùng, bạn cần hiểu được **DNS** ý tưởng như thế nào cũng như hoạt động ra làm sao. Ví dụ như việc bạn truy cập vào blog này sử dụng domain [teamkhunglong.com](https://teamkhunglong.com) thay vì một địa chỉ IP nào đó. Với mô hình nhỏ hơn như Kubernetes, thông thường những dịch vụ chạy trên đó cũng được tương tác với nhau hay được quản lý qua domain thay vì IP.
+Sau khi vui vẻ đủ dùng, bạn cần hiểu được **DNS** ý tưởng như thế nào cũng như hoạt động ra làm sao. Ví dụ như việc bạn truy cập vào blog này sử dụng domain [teamkhunglong.com](https://blog.teamkhunglong.com) thay vì một địa chỉ IP nào đó. Với mô hình nhỏ hơn như Kubernetes, thông thường những dịch vụ chạy trên đó cũng được tương tác với nhau hay được quản lý qua domain thay vì IP.
 
-Sau đó, chúng ta cần trang bị những kiến thức cụ thể về DevOps ví dụ như Load Balancer hay Proxy Server. Làm sao khi người dùng truy cập vào domain [teamkhunglong.com](https://teamkhunglong.com), sau khi phân giải tên miền đến địa chỉ front-end, làm sao để nó được kết nối đến back-end. Những thuật toán load-balencing gồm có những gì. Làm sao để dựng proxy server để những VM / Container đứng sau mạng ảo có thể kết nối được với internet bên ngoài.
+Sau đó, chúng ta cần trang bị những kiến thức cụ thể về DevOps ví dụ như Load Balancer hay Proxy Server. Làm sao khi người dùng truy cập vào domain [teamkhunglong.com](https://blog.teamkhunglong.com), sau khi phân giải tên miền đến địa chỉ front-end, làm sao để nó được kết nối đến back-end. Những thuật toán load-balencing gồm có những gì. Làm sao để dựng proxy server để những VM / Container đứng sau mạng ảo có thể kết nối được với internet bên ngoài.
 
 Thêm nữa, điều khá quan trọng và không thể thiếu được đó là firewall. Làm sao để chặn truy vấn đến các cổng được mở ra mạng Internet, làm sao để forward cổng dịch vụ được yêu cầu từ trong VM / Container ra mạng ngoài và chặn những cổng dịch vụ khác không cần thiết (ví dụ như port 22 SSH).
 

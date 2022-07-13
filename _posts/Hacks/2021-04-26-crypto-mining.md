@@ -3,6 +3,7 @@ layout: post
 title: "Crypto Mining"
 date: 2021-04-26 17:00:00 +0700
 category: hacks
+tags: mining
 author: minh
 short-description: Down to the rabbit hole - ETH mining
 ---
