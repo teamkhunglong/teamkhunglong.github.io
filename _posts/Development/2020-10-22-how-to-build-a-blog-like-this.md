@@ -4,6 +4,7 @@ title: "How to build a blog like this"
 date: 2020-10-22 10:00:00 +0700
 category: development
 author: minh
+tags: development github jekyll
 short-description: Github Pages + Jekyll + Google Analytics
 ---
 

@@ -4,6 +4,7 @@ title: "How to build v8 (but old version)"
 date: 2020-10-27 18:00:00 +0700
 category: development
 author: minh
+tags: development v8 javascript
 short-description: I want to build old version of v8, what now?
 ---
 
